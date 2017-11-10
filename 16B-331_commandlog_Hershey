@@ -219,4 +219,353 @@ flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
          mode='rflag', correlation='ABS_LL,RR', action='apply',
          extendflags=False, savepars=True, ntime='scan')
 
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        spw='0:21~43,1:21~43,2:21~43,3:21~43,4:21~43,5:21~43,6:21~43,7:21~43,8:21~43,9:21~43,10:21~43,11:21~43,12:21~43,13:21~43,14:21~43,15:21~43,16:21~43,17:21~43,18:21~43,19:21~43,20:21~43,21:21~43,22:21~43,23:21~43,24:21~43,25:21~43,26:21~43,27:21~43,28:21~43,29:21~43,30:21~43,31:21~43,32:21~43,33:21~43',
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19', solint='int',
+        field='0', combine='scan', solnorm=False, preavg=-1.0, docallib=False,
+        smodel=[], minblperant=13, gainfield=[''],
+        caltable='semiFinaldelayinitialgain.g', minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl'],
+        gaintype='G', selectdata=True)
 
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19', solint='inf',
+        field='0', combine='scan', solnorm=False, preavg=-1.0, docallib=False,
+        smodel=[], minblperant=13, gainfield=[''], caltable='delay.k',
+        minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+        'semiFinaldelayinitialgain.g'], gaintype='K', selectdata=True)
+
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        spw='0:21~43,1:21~43,2:21~43,3:21~43,4:21~43,5:21~43,6:21~43,7:21~43,8:21~43,9:21~43,10:21~43,11:21~43,12:21~43,13:21~43,14:21~43,15:21~43,16:21~43,17:21~43,18:21~43,19:21~43,20:21~43,21:21~43,22:21~43,23:21~43,24:21~43,25:21~43,26:21~43,27:21~43,28:21~43,29:21~43,30:21~43,31:21~43,32:21~43,33:21~43',
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19', solint='int',
+        combine='scan', solnorm=False, preavg=-1.0, docallib=False, smodel=[],
+        minblperant=13, gainfield=[''], caltable='BPinitialgain.g', minsnr=5.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+        'delay.k'], gaintype='G', selectdata=True)
+
+#Do tomorrow on Tuesday
+
+bandpass(bandtype='B', scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+         fillgaps=0, vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         spwmap=[], parang=False, append=False, refant='ea19', solint='inf',
+         field='0', combine='scan', solnorm=False, docallib=False, smodel=[],
+         minblperant=13, gainfield=[''], caltable='BPcal.b', minsnr=5.0,
+         gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+         'delay.k', 'BPinitialgain.g'], selectdata=True)
+
+applycal(gainfield=[''], flagbackup=False,
+         scan='4,5,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+         gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+         'delay.k', 'BPcal.b'], calwt=[False, False, False, False, False,
+         False], vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         applymode='calflagstrict', docallib=False, spwmap=[], parang=False,
+         selectdata=True)
+
+#Sol_int stage
+split(timebin='0s', outputvis='calibrators.ms',
+      scan='4,5,6,8,10,12,14,16,18,20,22,24,25', datacolumn='corrected',
+      keepmms=True, vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+      width=64, keepflags=False)
+
+gaincal(scan='4,5,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        vis='calibrators.ms', calmode='ap', spwmap=[], parang=False,
+        append=False, refant='ea19,ea24,ea10,ea25', solint='int',
+        combine='scan', solnorm=False, preavg=-1.0, smodel=[], minblperant=13,
+        gainfield=[''], caltable='testgaincal.g', minsnr=5.0, gaintable=[''],
+        gaintype='G', selectdata=True)
+
+plotcal(caltable= 'testgaincal.g',poln='R', 
+        xaxis='time',yaxis='phase',subplot=221, 
+        iteration='antenna',plotrange=[-1,-1,-180,180],
+        figfile='plotcal_testgaincalg-R-phase.png')
+
+#flux
+
+setjy(fluxdensity=-1, scalebychan=True, field='0', listmodels=False, standard
+      ='Perley-Butler 2013', vis='calibrators.ms', selectdata=False,
+      spw='0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33',
+      model='3C48_C.im', usescratch=True)
+gaincal(solint='2.0s', interp=[''], vis='calibrators.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        combine='scan', solnorm=False, preavg=-1.0, smodel=[], minblperant=13,
+        gainfield=[''], caltable='fluxphaseshortgaincal.g', minsnr=3.0,
+        gaintable=[''], gaintype='G', selectdata=False)
+gaincal(solint='321.180002063s', interp=[''], vis='calibrators.ms',
+        calmode='ap', spwmap=[], parang=False, append=False,
+        refant='ea19,ea24,ea10,ea25', combine='scan', solnorm=False,
+        preavg=-1.0, smodel=[], minblperant=13, gainfield=[''],
+        caltable='fluxgaincal.g', minsnr=5.0,
+        gaintable=['fluxphaseshortgaincal.g'], gaintype='G', selectdata=False)
+fluxscale(refspwmap=[-1], reference=['0'], caltable='fluxgaincal.g',
+          transfer=[''], vis='calibrators.ms', fluxtable='fluxgaincalFcal.g',
+          append=False)
+setjy(fluxdensity=[2.5009193450584748, 0, 0, 0], scalebychan=True,
+      field='PhJ2246-1206', spix=0.43650907060213678, listmodels=False,
+      standard='manual', vis='calibrators.ms', reffreq='6.808GHz',
+      selectdata=False,
+      spw='24,25,26,27,20,21,22,23,28,29,3,2,5,4,7,6,9,8,11,10,13,12,15,14,17,16,19,18,31,30,33,32',
+      usescratch=True)
+setjy(fluxdensity=[2.5009193450584748, 0, 0, 0], scalebychan=True,
+      field='PhJ2246-1206', spix=0.43650907060213678, listmodels=False,
+      standard='manual',
+      vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+      reffreq='6.808GHz', selectdata=False,
+      spw='24,25,26,27,20,21,22,23,28,29,3,2,5,4,7,6,9,8,11,10,13,12,15,14,17,16,19,18,31,30,33,32',
+      usescratch=True)
+
+# Final calibrations
+
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        spw='0:21~43,1:21~43,2:21~43,3:21~43,4:21~43,5:21~43,6:21~43,7:21~43,8:21~43,9:21~43,10:21~43,11:21~43,12:21~43,13:21~43,14:21~43,15:21~43,16:21~43,17:21~43,18:21~43,19:21~43,20:21~43,21:21~43,22:21~43,23:21~43,24:21~43,25:21~43,26:21~43,27:21~43,28:21~43,29:21~43,30:21~43,31:21~43,32:21~43,33:21~43',
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        solint='int', field='0', combine='scan', solnorm=False, preavg=-1.0,
+        docallib=False, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelayinitialgain.g',
+        minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl'],
+        gaintype='G', selectdata=True)
+
+plotcal(caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelayinitialgain.g',
+	xaxis='time',yaxis='delay',
+        poln='L',plotrange=[-1,-1,-180,180],figfile='finaldelayinitialgain_g.png')
+
+ERROR
+
+plotcal(caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelayinitialgain.g',
+	xaxis='time',yaxis='delay', subplot='2,2,1',
+        plotrange=[-1,-1,-180,180],figfile='finaldelayinitialgain_g.png')
+
+ERROR
+#gave up and will save it for later
+
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        solint='inf', field='0', combine='scan', solnorm=False, preavg=-1.0,
+        docallib=False, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k',
+        minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelayinitialgain.g'],
+        gaintype='K', selectdata=True)
+
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        spw='0:21~43,1:21~43,2:21~43,3:21~43,4:21~43,5:21~43,6:21~43,7:21~43,8:21~43,9:21~43,10:21~43,11:21~43,12:21~43,13:21~43,14:21~43,15:21~43,16:21~43,17:21~43,18:21~43,19:21~43,20:21~43,21:21~43,22:21~43,23:21~43,24:21~43,25:21~43,26:21~43,27:21~43,28:21~43,29:21~43,30:21~43,31:21~43,32:21~43,33:21~43',
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        solint='int', combine='scan', solnorm=False, preavg=-1.0,
+        docallib=False, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPinitialgain.g',
+        minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k'],
+        gaintype='G', selectdata=True)
+
+bandpass(bandtype='B', scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+         fillgaps=0, vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         spwmap=[], parang=False, append=False, refant='ea19', solint='inf',
+         field='0', combine='scan', solnorm=False, docallib=False, smodel=[],
+         minblperant=13, gainfield=[''],
+         caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPcal.b',
+         minsnr=5.0,
+         gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPinitialgain.g'],
+         selectdata=True)
+
+gaincal(scan='4,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+        vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        solint='inf', field='0', combine='scan', solnorm=False, preavg=-1.0,
+        docallib=False, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.averagephasegain.g',
+        minsnr=1.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k',
+        '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPcal.b'],
+        gaintype='G', selectdata=True)
+
+plotcal(caltable= '16B-331.sb32694462.eb32998128.57702.98375488426.ms.averagephasegain.g',
+	poln='R',xaxis='time',yaxis='phase',subplot=221, 
+        iteration='antenna',plotrange=[-1,-1,-180,180],
+        figfile='plotcal_avg_phase_gain.png')
+
+flagdata(flagbackup=False,
+         vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms.averagephasegain.g',
+         mode='unflag', action='apply', savepars=False)
+
+applycal(gainfield=[''], flagbackup=False,
+         scan='4,5,6,8,10,12,14,16,18,20,22,24,25', interp=[''],
+         gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPcal.b',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.averagephasegain.g'],
+         calwt=[False, False, False, False, False, False, False],
+         vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         applymode='calflagstrict', docallib=False, spwmap=[], parang=False,
+         selectdata=True)
+
+split(timebin='0s', outputvis='finalcalibrators.ms',
+      scan='4,5,6,8,10,12,14,16,18,20,22,24,25', datacolumn='corrected',
+      keepmms=True, vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+      width=64, keepflags=False)
+
+setjy(fluxdensity=-1, scalebychan=True, field='0', listmodels=False, standard
+      ='Perley-Butler 2013', vis='finalcalibrators.ms', selectdata=False,
+      spw='0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33',
+      model='3C48_C.im', usescratch=True)
+setjy(fluxdensity=[2.5009193450584748, 0, 0, 0], scalebychan=True,
+      field='PhJ2246-1206', spix=0.43650907060213678, listmodels=False,
+      standard='manual', vis='finalcalibrators.ms', reffreq='6.808GHz',
+      selectdata=False,
+      spw='24,25,26,27,20,21,22,23,28,29,3,2,5,4,7,6,9,8,11,10,13,12,15,14,17,16,19,18,31,30,33,32',
+      usescratch=True)
+gaincal(solint='2.0s', interp=[''], vis='finalcalibrators.ms', calmode='p',
+        spwmap=[], parang=False, append=False, refant='ea19,ea24,ea10,ea25',
+        combine='scan', solnorm=False, preavg=-1.0, smodel=[], minblperant=13,
+        gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.phaseshortgaincal.g',
+        minsnr=3.0, gaintable=[''], gaintype='G', selectdata=False)
+gaincal(solint='321.180002063s', interp=[''], vis='finalcalibrators.ms',
+        calmode='ap', spwmap=[], parang=False, append=False,
+        refant='ea19,ea24,ea10,ea25', combine='scan', solnorm=False,
+        preavg=-1.0, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalampgaincal.g',
+        minsnr=5.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.phaseshortgaincal.g'],
+        gaintype='G', selectdata=False)
+gaincal(solint='321.180002063s', interp=[''], vis='finalcalibrators.ms',
+        calmode='p', spwmap=[], parang=False, append=False,
+        refant='ea19,ea24,ea10,ea25', combine='scan', solnorm=False,
+        preavg=-1.0, smodel=[], minblperant=13, gainfield=[''],
+        caltable='16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalphasegaincal.g',
+        minsnr=3.0,
+        gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalampgaincal.g'],
+        gaintype='G', selectdata=False)
+
+#apply cals
+
+flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         mode='summary')
+applycal(gainfield=['', '', '', '', '', '', '', '', ''], flagbackup=False,
+         vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', interp=['',
+         '', '', '', '', '', '', '', ''],
+         gaintable=['16B-331.sb32694462.eb32998128.57702.98375488426.ms.gc.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.opac.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.rq.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.ants.tbl',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finaldelay.k',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalBPcal.b',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.averagephasegain.g',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalampgaincal.g',
+         '16B-331.sb32694462.eb32998128.57702.98375488426.ms.finalphasegaincal.g'],
+         spw='0~33', calwt=[False, False, False, False, False, False, False,
+         False, False], applymode='calflagstrict', antenna='*&*', spwmap=[[],
+         [], [], [], [], [], [], [], []])
+
+flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         mode='summary')
+flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', mode='list',
+         flagbackup=False, inpfile=["spw='2' fieldcnt=True mode='summary' name='AntSpw002", 
+	"spw='3' fieldcnt=True mode='summary' name='AntSpw003", 
+	"spw='4' fieldcnt=True mode='summary' name='AntSpw004",
+	"spw='5' fieldcnt=True mode='summary' name='AntSpw005", 
+	"spw='6' fieldcnt=True mode='summary' name='AntSpw006", 
+	"spw='7' fieldcnt=True mode='summary' name='AntSpw007", 
+	"spw='8' fieldcnt=True mode='summary' name='AntSpw008", 
+	"spw='9' fieldcnt=True mode='summary' name='AntSpw009", 
+	"spw='10' fieldcnt=True mode='summary' name='AntSpw010", 
+	"spw='11' fieldcnt=True mode='summary' name='AntSpw011",
+	"spw='12' fieldcnt=True mode='summary' name='AntSpw012", 
+	"spw='13' fieldcnt=True mode='summary' name='AntSpw013", 
+	"spw='14' fieldcnt=True mode='summary' name='AntSpw014",
+	"spw='15' fieldcnt=True mode='summary' name='AntSpw015", 
+	"spw='16' fieldcnt=True mode='summary' name='AntSpw016", 
+	"spw='17' fieldcnt=True mode='summary' name='AntSpw017", 
+	"spw='18' fieldcnt=True mode='summary' name='AntSpw018", 
+	"spw='19' fieldcnt=True mode='summary' name='AntSpw019", 
+	"spw='20' fieldcnt=True mode='summary' name='AntSpw020", 
+	"spw='21' fieldcnt=True mode='summary' name='AntSpw021", 
+	"spw='22' fieldcnt=True mode='summary' name='AntSpw022", 
+	"spw='23' fieldcnt=True mode='summary' name='AntSpw023", 
+	"spw='24' fieldcnt=True mode='summary' name='AntSpw024", 
+	"spw='25' fieldcnt=True mode='summary' name='AntSpw025", 
+	"spw='26' fieldcnt=True mode='summary' name='AntSpw026", 
+	"spw='27' fieldcnt=True mode='summary' name='AntSpw027", 
+	"spw='28' fieldcnt=True mode='summary' name='AntSpw028", 
+	"spw='29' fieldcnt=True mode='summary' name='AntSpw029", 
+	"spw='30' fieldcnt=True mode='summary' name='AntSpw030", 
+	"spw='31' fieldcnt=True mode='summary' name='AntSpw031", 
+	"spw='32' fieldcnt=True mode='summary' name='AntSpw032", 
+	"spw='33' fieldcnt=True mode='summary' name='AntSpw033"])
+
+#target flag
+
+flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         combinescans=False, flagbackup=True, timedevscale=4.0,
+         freqdevscale=4.0, datacolumn='corrected', winsize=3,
+         intent='*CALIBRATE*', mode='rflag', correlation='ABS_LL,RR',
+         action='apply', extendflags=False, savepars=True, ntime='scan')
+flagdata(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+         combinescans=False, flagbackup=True, timedevscale=4.0,
+         freqdevscale=4.0, datacolumn='corrected', winsize=3, intent='*TARGET*',
+         mode='rflag', correlation='ABS_LL,RR', action='apply',
+         extendflags=False, savepars=True, ntime='scan')
+
+#stat_wt
+
+statwt(dorms=False, datacolumn='corrected',
+       vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms', minsamp=2)
+
+#flux calibrator phas and amplitude plots
+plotms(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+	field='0',correlation='',
+        antenna='',avgtime='60',
+        xaxis='channel',yaxis='amp',ydatacolumn='corrected',
+        coloraxis='corr',
+        plotfile='plotms_w2246-fld0-corrected-amp.png')
+
+plotms(vis='16B-331.sb32694462.eb32998128.57702.98375488426.ms',
+	field='0',correlation='',
+       antenna='',avgtime='60',
+       xaxis='channel',yaxis='phase',ydatacolumn='corrected',
+       plotrange=[-1,-1,-180,180],coloraxis='corr',
+       plotfile='plotms_w2246-fld0-corrected-phase.png')
